@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Message UI</title>
+    <link rel="stylesheet" href="Toast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="toast">
+            <!-- success -->
+            <!-- <div class="toast toast--success">
+                <div class="toast__icon">
+                    <i class="fas fa-check-circle"></i>     
+                </div>
+                <div class="toast__body">
+                    <h3 class="toast__title">Success</h3>
+                        <p class="toast__msg">Các bạn chưa học Javascript thì chỉ cần quan tâm phần đầu của videos</p>
+                </div>
+                <div class="toast__close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div> -->
+    </div>
+    <div>
+        <div onclick="showSuccessToast();" class="btn btn--success">Show success toast</div>
+        <div onclick="showErrorToast()" class="btn btn--danger">Show error toast</div>
+    </div>
+    <script src="toast.js"></script>
+    <script>
+        //toast function
+       
+        function showSuccessToast(){
+            toast({
+            title: 'Thành Công!',
+            message: 'Chúc mừng bạn đã đăng kí thành công.',
+            type:'success',
+            duration:5000
+        });
+        }
+        function showErrorToast(){
+            toast({
+            title: 'Thất Bại!',
+            message: 'Đã xảy ra lỗi ! Vui lòng xem lại.',
+            type:'error',
+            duration:5000
+        })
+        }
+    </script>
+         <!-- Info-->
+         <!-- <div class="toast toast--info">
+            <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>     
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Info</h3>
+                    <p class="toast__msg">Các bạn chưa học Javascript thì chỉ cần quan tâm phần đầu của videos</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div> -->
+         <!-- Warning -->
+         <!-- <div class="toast toast--warning">
+            <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>     
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Warning</h3>
+                    <p class="toast__msg">Các bạn chưa học Javascript thì chỉ cần quan tâm phần đầu của videos</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div> -->
+         <!-- Error -->
+         <!-- <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fas fa-check-circle"></i>     
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Error</h3>
+                    <p class="toast__msg">Các bạn chưa học Javascript thì chỉ cần quan tâm phần đầu của videos</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div> -->
+
+</body>
+</html>
